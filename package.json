@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts .",
-    "release": "yarn test && yarn build && standard-version && npm run release",
+    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish",
     "test": "yarn lint && jest"
   },
   "devDependencies": {
