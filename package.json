@@ -1,6 +1,15 @@
 {
   "name": "theme-colors",
   "version": "0.0.1",
+  "description": "easily generate color shades for themes",
+  "keywords": [
+    "theme",
+    "colors",
+    "shades",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "repository": "nuxt-contrib/theme-colors",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
