@@ -1,4 +1,4 @@
-const { getColors } = require('../src/index')
+import { getColors } from '../src/index'
 
 const fixture = {
   hex: '#ABABAB',
