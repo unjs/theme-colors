@@ -1,16 +1,14 @@
 export function parseColor (color = '') {
-  if (color[0] === '#') {
-    return /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i
-      .exec(color)
-      .splice(1)
-      .map(c => parseInt(c, 16))
+  const hexMatch = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color)
+  if (hexMatch) {
+    return hexMatch.splice(1).map(c => parseInt(c, 16))
   }
 
   if (color.includes(',')) {
     return color.split(',').map(p => parseInt(p))
   }
 
-  return [0, 0, 0]
+  throw new Error('Invalid color format! Use #AABBCC or (r,g,b)')
 }
 
 export function hexValue (components) {

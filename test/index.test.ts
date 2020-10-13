@@ -26,5 +26,5 @@ test('getColors (rgb)', () => {
 })
 
 test('getColors (invalid)', () => {
-  expect(getColors('FOO')).toMatchObject(getColors('#000000'))
+  expect(() => getColors('red')).toThrowError('Invalid color format! Use #RRGGBB or (r,g,b)')
 })
