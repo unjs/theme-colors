@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/nuxt-contrib/theme-colors/compare/v0.0.3...v0.0.4) (2020-10-13)
+
+
+### Bug Fixes
+
+* correct rgb synxtax in parseColor error ([6499e26](https://github.com/nuxt-contrib/theme-colors/commit/6499e26381e77141ab02e4f7c9108c17711bb177))
+
 ### [0.0.3](https://github.com/nuxt-contrib/theme-colors/compare/v0.0.2...v0.0.3) (2020-10-13)
 
 
