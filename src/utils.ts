@@ -13,7 +13,7 @@ export function parseColor (color = '') {
     return color.split(',').map(p => parseInt(p))
   }
 
-  throw new Error('Invalid color format! Use #ABC or #AABBCC or (r,g,b)')
+  throw new Error('Invalid color format! Use #ABC or #AABBCC or r,g,b')
 }
 
 export function hexValue (components) {
