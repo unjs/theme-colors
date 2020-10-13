@@ -1,4 +1,5 @@
 import { getColors } from '../src/index'
+import { parseColor } from '../src/utils'
 
 const fixture = {
   hex: '#ABABAB',
@@ -26,5 +27,9 @@ test('getColors (rgb)', () => {
 })
 
 test('getColors (invalid)', () => {
-  expect(() => getColors('red')).toThrowError('Invalid color format! Use #RRGGBB or (r,g,b)')
+  expect(() => getColors('red')).toThrowError(/Invalid color format!/)
+})
+
+test('parseColor (shorthand)', () => {
+  expect(parseColor('#09C')).toEqual(parseColor('#0099cc'))
 })
