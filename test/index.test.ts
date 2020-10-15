@@ -30,6 +30,10 @@ test('getColors (invalid)', () => {
   expect(() => getColors('red')).toThrowError(/Invalid color format!/)
 })
 
+test('getColors (invalid obj)', () => {
+  expect(() => getColors({})).toThrowError(/Color should be string!/)
+})
+
 test('parseColor (shorthand)', () => {
   expect(parseColor('#09C')).toEqual(parseColor('#0099cc'))
 })

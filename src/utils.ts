@@ -1,4 +1,8 @@
 export function parseColor (color = '') {
+  if (typeof color !== 'string') {
+    throw new TypeError('Color should be string!')
+  }
+
   const hexMatch = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color)
   if (hexMatch) {
     return hexMatch.splice(1).map(c => parseInt(c, 16))
