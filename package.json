@@ -9,7 +9,7 @@
     "tailwind",
     "tailwindcss"
   ],
-  "repository": "nuxt-contrib/theme-colors",
+  "repository": "unjs/theme-colors",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
