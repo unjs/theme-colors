@@ -20,18 +20,18 @@ export function parseColor (color = '') {
   throw new Error('Invalid color format! Use #ABC or #AABBCC or r,g,b')
 }
 
-export function hexValue (components) {
+export function hexValue (components: number[]) {
   return '#' + components.map(c => `0${c.toString(16).toUpperCase()}`.slice(-2)).join('')
 }
 
-export function tint (components, intensity) {
+export function tint (components: number[], intensity: number) {
   return components.map(c => Math.round(c + (255 - c) * intensity))
 }
 
-export function shade (components, intensity) {
+export function shade (components: number[], intensity: number) {
   return components.map(c => Math.round(c * intensity))
 }
 
-export const withTint = intensity => hex => tint(hex, intensity)
+export const withTint = (intensity: number) => (hex: number[]) => tint(hex, intensity)
 
-export const withShade = intensity => hex => shade(hex, intensity)
+export const withShade = (intensity: number) => (hex: number[]) => shade(hex, intensity)

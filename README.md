@@ -11,7 +11,7 @@
 Install:
 
 ```bash
-yarn add theme-colors
+pnpm add theme-colors
 
 # or
 

@@ -1,7 +1,9 @@
 {
   "name": "theme-colors",
   "version": "0.0.5",
-  "description": "easily generate color shades for themes",
+  "description": "Easily generate color shades for themes",
+  "repository": "unjs/theme-colors",
+  "license": "MIT",
   "keywords": [
     "theme",
     "colors",
@@ -9,26 +11,34 @@
     "tailwind",
     "tailwindcss"
   ],
-  "repository": "nuxt-contrib/theme-colors",
-  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "main": "dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "unbuild",
+    "dev": "vitest",
     "lint": "eslint --ext .ts .",
-    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && jest"
+    "prepack": "pnpm build",
+    "release": "pnpm test && standard-version && git push --follow-tags && pnpm publish",
+    "test": "pnpm lint && vitest run"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^3.0.0",
-    "eslint": "^7.9.0",
-    "jest": "^26.4.2",
-    "standard-version": "^9.0.0",
-    "ts-jest": "^26.4.0",
-    "tsc": "^1.20150623.0",
-    "typescript": "^4.0.3"
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "eslint": "latest",
+    "standard-version": "latest",
+    "typescript": "latest",
+    "unbuild": "latest",
+    "vitest": "^0.9.3"
   }
 }
