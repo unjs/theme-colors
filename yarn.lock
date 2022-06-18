@@ -5250,10 +5250,10 @@ ts-jest@^26.4.0:
     semver "7.x"
     yargs-parser "20.x"
 
-tsc@^1.20150623.0:
-  version "1.20150623.0"
-  resolved "https://registry.yarnpkg.com/tsc/-/tsc-1.20150623.0.tgz#4ebc3c774e169148cbc768a7342533f082c7a6e5"
-  integrity sha1-Trw8d04WkUjLx2inNCUz8ILHpuU=
+tsc@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/tsc/-/tsc-2.0.4.tgz#5f6499146abea5dca4420b451fa4f2f9345238f5"
+  integrity sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q==
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"
