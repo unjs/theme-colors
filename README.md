@@ -2,9 +2,9 @@
 
 > Easily generate color shades for themes
 
-[![codecov][codecov-src]][codecov-href]
 [![npm version][npm-v-src]][npm-v-href]
 [![npm downloads][npm-dm-src]][npm-dm-href]
+[![codecov][codecov-src]][codecov-href]
 [![package phobia][packagephobia-src]][packagephobia-href]
 [![bundle phobia][bundlephobia-src]][bundlephobia-href]
 
@@ -63,5 +63,5 @@ MIT. Made with 💖
 [bundlephobia-src]: https://flat.badgen.net/bundlephobia/min/theme-colors
 [bundlephobia-href]: https://bundlephobia.com/result?p=theme-colors
 
-[codecov-src]: https://flat.badgen.net/codecov/c/github/nuxt-contrib/theme-colors/master
-[codecov-href]: https://codecov.io/gh/nuxt-contrib/theme-colors
+[codecov-src]: https://flat.badgen.net/codecov/c/github/unjs/theme-colors/master
+[codecov-href]: https://codecov.io/gh/unjs/theme-colors
