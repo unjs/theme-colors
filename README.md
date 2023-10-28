@@ -53,6 +53,7 @@ This will generate the following shades:
   700: '#676767',
   800: '#4D4D4D',
   900: '#333333',
+  950: '#222222',
 }
 ```
 
