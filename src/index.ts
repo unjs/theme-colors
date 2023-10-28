@@ -11,6 +11,7 @@ export const _variants = {
   700: withShade(0.6),
   800: withShade(0.45),
   900: withShade(0.3),
+  950: withShade(0.2),
 };
 
 export function getColors(color: string, variants = _variants) {
