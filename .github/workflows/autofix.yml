@@ -17,10 +17,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "pnpm"
-      - run: pnpm install
+          cache: "yarn"
+      - run: yarn install
       - name: Fix lint issues
-        run: pnpm run lint:fix
+        run: yarn run lint:fix
       - uses: autofix-ci/action@8caa572fd27b0019a65e4c695447089c8d3138b9
         with:
           commit-message: "chore: apply automated fixes"
