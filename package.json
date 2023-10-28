@@ -16,11 +16,12 @@
   "files": [
     "dist"
   ],
+  "packageManager": "pnpm@8.7.1",
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts .",
-    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && jest"
+    "release": "pnpm test && pnpm build && standard-version && git push --follow-tags && npm publish",
+    "test": "pnpm lint && jest"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
