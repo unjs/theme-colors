@@ -29,14 +29,14 @@ Import:
 
 ```js
 // ESM
-import { getColors } from 'theme-colors'
+import { getColors } from "theme-colors";
 
 // CommonJS
 const { getColors } = require("theme-colors");
 
-const theme = getColors('#ABABAB')
+const theme = getColors("#ABABAB");
 // Or using RGB
-const theme = getColors('172,172,172')
+const theme = getColors("172,172,172");
 ```
 
 This will generate the following shades:
