@@ -1,33 +1,45 @@
 # theme-colors
 
-> Easily generate color shades for themes
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![bundle][bundle-src]][bundle-href]
+[![Codecov][codecov-src]][codecov-href]
 
-[![npm version][npm-v-src]][npm-v-href]
-[![npm downloads][npm-dm-src]][npm-dm-href]
-[![codecov][codecov-src]][codecov-href]
-[![package phobia][packagephobia-src]][packagephobia-href]
-[![bundle phobia][bundlephobia-src]][bundlephobia-href]
+Easily generate color shades for themes
 
-Install:
+## Usage
 
-```bash
-pnpm add theme-colors
+Install package:
 
-# or
+```sh
+# npm
+npm install theme-colors
 
-npm i theme-colors
+# yarn
+yarn add theme-colors
+
+# pnpm
+pnpm install theme-colors
+
+# bun
+bun install theme-colors
 ```
 
-Usage:
+Import:
 
 ```js
+// ESM
 import { getColors } from 'theme-colors'
 
-const theme = getColors('#ABABAB')
+// CommonJS
+const { getColors } = require("theme-colors");
 
-// Using rgb
+const theme = getColors('#ABABAB')
+// Or using RGB
 const theme = getColors('172,172,172')
 ```
+
+This will generate the following shades:
 
 ```js
 {
@@ -44,24 +56,29 @@ const theme = getColors('172,172,172')
 }
 ```
 
+## Development
+
+- Clone this repository
+- Install latest LTS version of [Node.js](https://nodejs.org/en/)
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
+- Install dependencies using `pnpm install`
+- Run interactive tests using `pnpm dev`
+
 ## License
 
 Inspired by [javisperez/tailwindcolorshades](https://github.com/javisperez/tailwindcolorshades)
 
-MIT. Made with 💖
+Made with 💛
 
-<!-- Refs -->
-[npm-v-src]: https://flat.badgen.net/npm/v/theme-colors/latest
-[npm-v-href]: https://npmjs.com/package/theme-colors
+Published under [MIT License](./LICENSE).
 
-[npm-dm-src]: https://flat.badgen.net/npm/dm/theme-colors
-[npm-dm-href]: https://npmjs.com/package/theme-colors
+<!-- Badges -->
 
-[packagephobia-src]: https://flat.badgen.net/packagephobia/install/theme-colors
-[packagephobia-href]: https://packagephobia.now.sh/result?p=theme-colors
-
-[bundlephobia-src]: https://flat.badgen.net/bundlephobia/min/theme-colors
-[bundlephobia-href]: https://bundlephobia.com/result?p=theme-colors
-
-[codecov-src]: https://flat.badgen.net/codecov/c/github/unjs/theme-colors/master
+[npm-version-src]: https://img.shields.io/npm/v/theme-colors?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-href]: https://npmjs.com/package/theme-colors
+[npm-downloads-src]: https://img.shields.io/npm/dm/theme-colors?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/theme-colors
+[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/theme-colors/main?style=flat&colorA=18181B&colorB=F0DB4F
 [codecov-href]: https://codecov.io/gh/unjs/theme-colors
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/theme-colors?style=flat&colorA=18181B&colorB=F0DB4F
+[bundle-href]: https://bundlephobia.com/result?p=theme-colors
