@@ -2,8 +2,6 @@
   "name": "theme-colors",
   "version": "0.0.5",
   "description": "Easily generate color shades for themes",
-  "repository": "unjs/theme-colors",
-  "license": "MIT",
   "keywords": [
     "theme",
     "colors",
@@ -11,6 +9,8 @@
     "tailwind",
     "tailwindcss"
   ],
+  "repository": "unjs/theme-colors",
+  "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -29,7 +29,6 @@
   "scripts": {
     "build": "unbuild",
     "dev": "vitest dev",
-    "play": "jiti playground",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
     "prepack": "pnpm run build",
