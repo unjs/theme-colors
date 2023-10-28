@@ -1,26 +1,26 @@
-name: autofix.ci # needed to securely identify the workflow
+name: ci
 
 on:
-  pull_request:
   push:
-    branches: ["master"]
-
-permissions:
-  contents: read
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  autofix:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: corepack enable
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "yarn"
-      - run: yarn install
-      - name: Fix lint issues
-        run: yarn run lint:fix
-      - uses: autofix-ci/action@8caa572fd27b0019a65e4c695447089c8d3138b9
-        with:
-          commit-message: "chore: apply automated fixes"
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm test:types
+      - run: pnpm build
+      - run: pnpm vitest --coverage
+      - uses: codecov/codecov-action@v3
