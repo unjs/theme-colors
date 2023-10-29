@@ -4,7 +4,10 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true,
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

@@ -20,15 +20,21 @@
       "require": "./dist/index.cjs"
     }
   },
+  "bin": {
+    "theme-colors": "./bin/theme-colors.mjs"
+  },
   "main": "dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "scripts": {
     "build": "unbuild",
+    "build:stub": "unbuild --stub",
     "dev": "vitest dev",
+    "theme-colors": "node bin/theme-colors.mjs",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
     "prepack": "pnpm run build",
@@ -47,5 +53,8 @@
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "citty": "^0.1.4"
   }
 }
