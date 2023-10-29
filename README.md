@@ -20,7 +20,7 @@ npx theme-colors <color>
 Example:
 
 ```bash
-npx theme-colors #ABABAB
+npx theme-colors "#ABABAB" # Be careful and add doubles quotes
 ```
 
 This will generate the following shades:
