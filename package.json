@@ -9,7 +9,10 @@
     "tailwind",
     "tailwindcss"
   ],
-  "repository": "unjs/theme-colors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unjs/theme-colors.git"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
