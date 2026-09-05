@@ -41,4 +41,15 @@ describe("theme-colors", () => {
   it("parseColor (shorthand)", () => {
     expect(parseColor("#09C")).toEqual(parseColor("#0099cc"));
   });
+
+  it.each([
+    ["a,b,c", "non-numeric components"],
+    [",,", "empty components"],
+    ["255,0", "too few components"],
+    ["255,0,0,0", "too many components"],
+    ["300,0,0", "a component above 255"],
+    ["-20,0,0", "a negative component"],
+  ])("getColors (invalid rgb: %s)", (color) => {
+    expect(() => getColors(color)).toThrowError(/Invalid color format!/);
+  });
 });

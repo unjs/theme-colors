@@ -14,7 +14,13 @@ export function parseColor(color = "") {
   }
 
   if (color.includes(",")) {
-    return color.split(",").map((p) => Number.parseInt(p));
+    const components = color.split(",").map((p) => Number.parseInt(p));
+    if (
+      components.length === 3 &&
+      components.every((c) => Number.isInteger(c) && c >= 0 && c <= 255)
+    ) {
+      return components;
+    }
   }
 
   throw new Error("Invalid color format! Use #ABC or #AABBCC or r,g,b");
