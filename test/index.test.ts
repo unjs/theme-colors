@@ -41,4 +41,20 @@ describe("theme-colors", () => {
   it("parseColor (shorthand)", () => {
     expect(parseColor("#09C")).toEqual(parseColor("#0099cc"));
   });
+
+  it.each([
+    ["a,b,c", "non-numeric components"],
+    [",,", "empty components"],
+    ["255,0", "too few components"],
+    ["255,0,0,0", "too many components"],
+    ["300,0,0", "a component above 255"],
+    ["-20,0,0", "a negative component"],
+    ["1.5,0,0", "a fractional component"],
+    ["1foo,0,0", "a component with trailing characters"],
+    ["0x10,0,0", "a hexadecimal component"],
+    ["1e2,0,0", "an exponential component"],
+    ["+1,0,0", "a signed component"],
+  ])("getColors (invalid rgb: %s)", (color) => {
+    expect(() => getColors(color)).toThrowError(/Invalid color format!/);
+  });
 });
