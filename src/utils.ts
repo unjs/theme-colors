@@ -14,12 +14,15 @@ export function parseColor(color = "") {
   }
 
   if (color.includes(",")) {
-    const components = color.split(",").map((p) => Number.parseInt(p));
-    if (
-      components.length === 3 &&
-      components.every((c) => Number.isInteger(c) && c >= 0 && c <= 255)
-    ) {
-      return components;
+    // Only plain decimal integers are accepted. `Number.parseInt` would
+    // silently take a valid prefix ("1.5" -> 1, "1foo" -> 1) and `Number`
+    // would accept other numeric syntaxes ("0x10", "1e2", "" -> 0).
+    const tokens = color.split(",");
+    if (tokens.length === 3 && tokens.every((p) => /^\s*\d+\s*$/.test(p))) {
+      const components = tokens.map((p) => Number.parseInt(p, 10));
+      if (components.every((c) => c <= 255)) {
+        return components;
+      }
     }
   }
 
